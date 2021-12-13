@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { useState } from "react";
+
+
+
+
+
+//components
+import Escena from "./components/escena/Escena";
+import history from './components/history.json';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [historyIndex, setHistoryIndex] = useState(0);
+
+    const newhistory = history.map((textHistory, index)=>{
+        return(
+            
+                historyIndex === index ? <Escena backgroundColor="red" historia = {textHistory}/> 
+                : <Escena historia = {textHistory}/>
+            
+            
+    
+        )
+    })
+
+    return <div className = "App">
+
+
+        {
+            newhistory
+        }
+        </div>
 }
 
 export default App;
