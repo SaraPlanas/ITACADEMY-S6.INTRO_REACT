@@ -8,12 +8,14 @@ border: 2px solid black;
 color: black;
 padding: 1em;
 margin: 20px;
-`
+`;
 
 
 function Escena(props){
+  
+    return (
     
-    return <H5 backgroundColor= {props.backgroundColor}>  {props.historia}</H5>;
+        <H5 backgroundColor= {props.backgroundColor}>  {props.historia}</H5>)
 
 }
 export default Escena;
