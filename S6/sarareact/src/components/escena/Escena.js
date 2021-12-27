@@ -9,7 +9,21 @@ color: black;
 padding: 1em;
 margin: 20px;
 `;
+//css
+const Button = styled.button`
+  background-color: grey;
+  color: black;
+  font-size: 20px;
+  padding: 1em;
+  margin: 0px;
+  cursor: pointer;
+  width:100%;
+  `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+   
+`
 
 function Escena(props){
   
